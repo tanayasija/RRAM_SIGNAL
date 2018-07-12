@@ -441,7 +441,7 @@ void RRAM::read_status_register(void)
 			{
 				break;
 			}
-			sc_logic status_data =(sc_logic) status_register_1[i];
+			sc_logic status_data =(sc_logic) status_register_1[7-i];
 			data_out_p->write(status_data);
 			i++;
 			if (i==8)
