@@ -114,6 +114,7 @@ void sender::transciever()
 		sr_bit = bit_in->read();
 		cout << "Status regiter bit " << i+1 << " read at time " << sc_time_stamp() << " as " << sr_bit << endl;
 	}
+	wait();
 	wait(5,SC_NS);
 	cs_pin->write(sc_bit('1'));
 	wait();
@@ -135,6 +136,7 @@ void sender::transciever()
 		sr_bit = bit_in->read();
 		cout << "Status regiter bit " << i+1 << " read at time " << sc_time_stamp() << " as " << sr_bit << endl;
 	}
+	wait();
 	wait(5,SC_NS);
 	cs_pin->write(sc_bit('1'));
 	cout << sc_time_stamp() << endl;
